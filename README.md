@@ -1,5 +1,7 @@
 # Industrial Foregoing: Extra
 - Artist: [MHanHanBing](https://github.com/MHanHanBing)
+- 美术资源协议 CC BY-NC-SA 3.0
+- 代码协议 GNU GENERAL PUBLIC LICENSE Version 3
 ## Contact [![Discord](https://img.shields.io/discord/102860784329052160.svg?style=for-the-badge&logo=discord)](https://discord.gg/jyUpUuHV)
 ## 该mod支持通过KubeJS来注册工业先锋的各种升级(强烈建议配合probejs一起食用)
 
