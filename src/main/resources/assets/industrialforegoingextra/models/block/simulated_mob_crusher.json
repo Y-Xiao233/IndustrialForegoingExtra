@@ -1,0 +1,10 @@
+{
+  "parent": "industrialforegoing:block/base_block",
+  "textures": {
+    "south": "industrialforegoingextra:block/simulated_mob_crusher_back",
+    "west": "industrialforegoingextra:block/simulated_mob_crusher_side",
+    "east": "industrialforegoingextra:block/simulated_mob_crusher_side",
+    "north": "industrialforegoingextra:block/simulated_mob_crusher_side",
+    "up": "industrialforegoingextra:block/simulated_mob_crusher_top"
+  }
+}

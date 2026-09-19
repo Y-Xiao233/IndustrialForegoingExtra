@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "industrialforegoingextra:block/dragon_star_block"
+  }
+}

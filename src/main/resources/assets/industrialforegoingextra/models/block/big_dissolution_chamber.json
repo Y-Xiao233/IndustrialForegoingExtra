@@ -1,0 +1,14 @@
+{
+	"loader": "neoforge:obj",
+	"parent": "block/block",
+	"model": "industrialforegoingextra:models/block/big_dissolution_chamber.obj",
+	"flip_v": true,
+	"render_type": "cutout",
+	"textures": {
+		"particle": "industrialforegoingextra:block/big_dissolution_chamber",
+		"top": "industrialforegoingextra:block/base/top",
+		"side": "industrialforegoingextra:block/base/side",
+		"bottom": "industrialforegoingextra:block/base/bottom",
+		"north": "industrialforegoingextra:block/big_dissolution_chamber"
+	}
+}

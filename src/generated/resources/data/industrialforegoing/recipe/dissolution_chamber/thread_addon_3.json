@@ -1,0 +1,49 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialforegoingextra:thread_addon_3"
+    }
+  ],
+  "type": "industrialforegoing:dissolution_chamber",
+  "input": [
+    {
+      "tag": "c:dusts/redstone"
+    },
+    {
+      "tag": "c:dusts/redstone"
+    },
+    {
+      "tag": "c:glass_panes/colorless"
+    },
+    {
+      "item": "industrialforegoingextra:thread_addon_2"
+    },
+    {
+      "tag": "c:gears/netherite"
+    },
+    {
+      "tag": "c:gears/netherite"
+    },
+    {
+      "item": "minecraft:echo_shard"
+    },
+    {
+      "tag": "c:ingots/netherite"
+    }
+  ],
+  "inputFluid": {
+    "amount": 1000,
+    "fluid": "industrialforegoing:pink_slime"
+  },
+  "output": {
+    "components": {
+      "titanium:augments": {
+        "Thread": 12.0
+      }
+    },
+    "count": 1,
+    "id": "industrialforegoingextra:thread_addon_3"
+  },
+  "processingTime": 200
+}

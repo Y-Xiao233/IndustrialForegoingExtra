@@ -1,0 +1,1 @@
+net.yxiao233.industrialforegoingextra.compact.kubejs.IFEKubeJSPlugin

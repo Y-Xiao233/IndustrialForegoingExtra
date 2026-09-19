@@ -1,0 +1,10 @@
+{
+  "parent": "industrialforegoing:block/base_block",
+  "textures": {
+    "south": "industrialforegoingextra:block/simulated_ore_laser_base_side",
+    "west": "industrialforegoingextra:block/simulated_ore_laser_base_side",
+    "east": "industrialforegoingextra:block/simulated_ore_laser_base_side",
+    "north": "industrialforegoingextra:block/simulated_ore_laser_base_side",
+    "down": "industrialforegoing:block/laser_base_bottom"
+  }
+}

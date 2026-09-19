@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialforegoingextra:dragon_star"
+    }
+  ],
+  "type": "industrialforegoingextra:shapeless",
+  "inputFluid": {
+    "amount": 100,
+    "id": "industrialforegoingextra:liquid_dragon_breath"
+  },
+  "inputs": [
+    {
+      "item": "industrialforegoingextra:dragon_star_block"
+    }
+  ],
+  "output": {
+    "count": 9,
+    "id": "industrialforegoingextra:dragon_star"
+  }
+}

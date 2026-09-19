@@ -1,0 +1,49 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialforegoingextra:speed_addon_3"
+    }
+  ],
+  "type": "industrialforegoing:dissolution_chamber",
+  "input": [
+    {
+      "tag": "c:dusts/redstone"
+    },
+    {
+      "tag": "c:dusts/redstone"
+    },
+    {
+      "tag": "c:glass_panes/colorless"
+    },
+    {
+      "item": "industrialforegoing:speed_addon_tier_2"
+    },
+    {
+      "tag": "c:gears/netherite"
+    },
+    {
+      "tag": "c:gears/netherite"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "inputFluid": {
+    "amount": 1000,
+    "fluid": "industrialforegoing:pink_slime"
+  },
+  "output": {
+    "components": {
+      "titanium:augments": {
+        "Speed": 4.0
+      }
+    },
+    "count": 1,
+    "id": "industrialforegoingextra:speed_addon_3"
+  },
+  "processingTime": 200
+}

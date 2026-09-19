@@ -1,0 +1,27 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.yxiao233.industrialforegoingextra.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "net.yxiao233.industrialforegoingextra.mixin.IFEMixinPlugin",
+  "mixins": [
+    "EnergyStorageAccessor",
+    "MixinAugmentWrapper",
+    "MixinFluidLaserBaseTile",
+    "MixinIndustrialMachineTile",
+    "MixinIndustrialProcessingTile",
+    "MixinIndustrialWorkingTile",
+    "MixinMachineFrameItem",
+    "MixinOreLaserBaseTile",
+    "MixinSoulLaserBaseBlockEntity",
+    "MixinStasisChamberTile"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

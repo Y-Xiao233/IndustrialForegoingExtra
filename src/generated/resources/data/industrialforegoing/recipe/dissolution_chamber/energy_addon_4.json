@@ -1,0 +1,49 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialforegoingextra:energy_addon_4"
+    }
+  ],
+  "type": "industrialforegoing:dissolution_chamber",
+  "input": [
+    {
+      "tag": "c:dusts/redstone"
+    },
+    {
+      "tag": "c:dusts/redstone"
+    },
+    {
+      "tag": "c:glass_panes/colorless"
+    },
+    {
+      "item": "industrialforegoingextra:energy_addon_3"
+    },
+    {
+      "tag": "c:gears/sculk"
+    },
+    {
+      "tag": "c:gears/sculk"
+    },
+    {
+      "item": "industrialforegoing:mycelial_magma"
+    },
+    {
+      "item": "industrialforegoing:infinity_charger"
+    }
+  ],
+  "inputFluid": {
+    "amount": 1000,
+    "fluid": "industrialforegoing:ether_gas"
+  },
+  "output": {
+    "components": {
+      "titanium:augments": {
+        "Energy": 1000.0
+      }
+    },
+    "count": 1,
+    "id": "industrialforegoingextra:energy_addon_4"
+  },
+  "processingTime": 200
+}

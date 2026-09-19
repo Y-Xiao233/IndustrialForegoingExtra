@@ -1,0 +1,128 @@
+package net.yxiao233.industrialforegoingextra.api.tile;
+
+import com.hrznstudio.titanium.annotation.Save;
+import com.hrznstudio.titanium.component.fluid.SidedFluidTankComponent;
+import com.hrznstudio.titanium.component.progress.ProgressBarComponent;
+import com.hrznstudio.titanium.module.BlockWithTile;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.fluids.FluidStack;
+import net.neoforged.neoforge.fluids.capability.IFluidHandler;
+
+import java.lang.reflect.Field;
+
+public abstract class IFEFluidFuelGeneratorTile<T extends IFEFluidFuelGeneratorTile<T>> extends IFEIndustrialGeneratorTile<T>{
+    public int getPowerPerTick;
+    public int getExtractionRate;
+    public int getMaxProgress;
+    public int getMaxStoredPower;
+    public int maxInputTankSize;
+    @Save
+    public SidedFluidTankComponent<T> inputFluid;
+    public IFEFluidFuelGeneratorTile(BlockWithTile blockWithTile, BlockPos blockPos, BlockState blockState) {
+        super(blockWithTile, blockPos, blockState);
+        init();
+    }
+
+    public abstract FluidTankElements getFluidTankElements();
+    public abstract Class<?> getGeneratorConfigClass();
+    public abstract FluidStack getConsumeFuel();
+    public abstract boolean extraStartCondition();
+
+    public void init(){
+        int powerPerTick,extractionRate,maxProgress,maxStoredPower,maxInputTankSize;
+        try {
+            Class<?> clazz = getGeneratorConfigClass();
+            Field field1 = clazz.getField("powerPerTick");
+            Field field2 = clazz.getField("extractionRate");
+            Field field3 = clazz.getField("maxProgress");
+            Field field4 = clazz.getField("maxStoredPower");
+            Field field5 = clazz.getField("maxInputTankSize");
+            powerPerTick = field1.getInt(field1.getName());
+            extractionRate = field2.getInt(field2.getName());
+            maxProgress = field3.getInt(field3.getName());
+            maxStoredPower = field4.getInt(field4.getName());
+            maxInputTankSize = field5.getInt(field5.getName());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+        this.getPowerPerTick = powerPerTick;
+        this.getExtractionRate = extractionRate;
+        this.getMaxProgress = maxProgress;
+        this.getMaxStoredPower = maxStoredPower;
+        this.maxInputTankSize = maxInputTankSize;
+
+        FluidTankElements elements = getFluidTankElements();
+        this.addTank(this.inputFluid = (SidedFluidTankComponent<T>) new SidedFluidTankComponent<T>(elements.getId(),this.maxInputTankSize, elements.getXPos(), elements.getYPos(), elements.getPosition())
+                .setColor(elements.getColor())
+                .setTankType(elements.getType())
+                .setComponentHarness(this.getSelf()));
+    }
+
+    @Override
+    public int consumeFuel() {
+        FluidStack stack = getConsumeFuel();
+        if (inputFluid.getFluid().is(stack.getFluid()) && inputFluid.getFluid().getAmount() >= stack.getAmount() && extraStartCondition()) {
+            inputFluid.drainForced(stack, IFluidHandler.FluidAction.EXECUTE);
+            return this.getMaxProgress;
+        }else{
+            return 0;
+        }
+    }
+
+
+    @Override
+    public boolean canStart() {
+        FluidStack stack = getConsumeFuel();
+        return inputFluid.getFluid().is(stack.getFluid()) && inputFluid.getFluid().getAmount() >= stack.getAmount() && extraStartCondition();
+    }
+
+    @Override
+    public int getEnergyProducedEveryTick() {
+        int powerPerTick;
+        try {
+            Class<?> clazz = getGeneratorConfigClass();
+            Field field4 = clazz.getField("powerPerTick");
+            powerPerTick = field4.getInt(field4.getName());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return powerPerTick;
+    }
+
+    @Override
+    public ProgressBarComponent<T> getProgressBar() {
+        return new ProgressBarComponent<T>(30,20,0,15)
+                .setComponentHarness(this.getSelf())
+                .setBarDirection(ProgressBarComponent.BarDirection.VERTICAL_UP)
+                .setColor(DyeColor.CYAN);
+    }
+
+    @Override
+    public int getEnergyCapacity() {
+        int maxStoredPower;
+        try {
+            Class<?> clazz = getGeneratorConfigClass();
+            Field field4 = clazz.getField("maxStoredPower");
+            maxStoredPower = field4.getInt(field4.getName());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return maxStoredPower;
+    }
+
+    @Override
+    public int getExtractingEnergy() {
+        int extractionRate;
+        try {
+            Class<?> clazz = getGeneratorConfigClass();
+            Field field4 = clazz.getField("extractionRate");
+            extractionRate = field4.getInt(field4.getName());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return extractionRate;
+    }
+}

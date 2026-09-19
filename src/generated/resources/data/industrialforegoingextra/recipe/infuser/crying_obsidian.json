@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "minecraft:crying_obsidian"
+    }
+  ],
+  "type": "industrialforegoingextra:infuser",
+  "input": {
+    "count": 1,
+    "id": "minecraft:obsidian"
+  },
+  "inputFluid": {
+    "amount": 2000,
+    "id": "industrialforegoingextra:liquid_sculk_matter"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:crying_obsidian"
+  },
+  "processingTime": 200
+}

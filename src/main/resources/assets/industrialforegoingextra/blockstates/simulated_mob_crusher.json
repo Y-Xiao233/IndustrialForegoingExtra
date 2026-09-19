@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "subfacing=east": {
+      "model": "industrialforegoingextra:block/simulated_mob_crusher",
+      "y": 90
+    },
+    "subfacing=north": {
+      "model": "industrialforegoingextra:block/simulated_mob_crusher"
+    },
+    "subfacing=south": {
+      "model": "industrialforegoingextra:block/simulated_mob_crusher",
+      "y": 180
+    },
+    "subfacing=west": {
+      "model": "industrialforegoingextra:block/simulated_mob_crusher",
+      "y": 270
+    }
+  }
+}

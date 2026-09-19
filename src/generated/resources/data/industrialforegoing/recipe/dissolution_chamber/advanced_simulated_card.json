@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialforegoingextra:advanced_simulated_card"
+    }
+  ],
+  "type": "industrialforegoing:dissolution_chamber",
+  "input": [
+    {
+      "item": "industrialforegoingextra:simulated_card"
+    },
+    {
+      "item": "minecraft:conduit"
+    },
+    {
+      "tag": "industrialforegoingextra:machine_frame/ultimate"
+    },
+    {
+      "item": "minecraft:sculk"
+    },
+    {
+      "item": "minecraft:heavy_core"
+    },
+    {
+      "item": "minecraft:dragon_breath"
+    },
+    {
+      "tag": "c:storage_blocks/netherite"
+    },
+    {
+      "item": "minecraft:nether_star"
+    }
+  ],
+  "inputFluid": {
+    "amount": 100,
+    "fluid": "industrialforegoingextra:dragon_star_essence_source"
+  },
+  "output": {
+    "count": 1,
+    "id": "industrialforegoingextra:advanced_simulated_card"
+  },
+  "processingTime": 400
+}

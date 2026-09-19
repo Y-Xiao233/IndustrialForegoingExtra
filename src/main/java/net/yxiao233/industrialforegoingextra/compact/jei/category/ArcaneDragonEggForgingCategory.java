@@ -1,0 +1,111 @@
+package net.yxiao233.industrialforegoingextra.compact.jei.category;
+
+import com.hrznstudio.titanium.api.client.AssetTypes;
+import com.hrznstudio.titanium.client.screen.addon.EnergyBarScreenAddon;
+import com.hrznstudio.titanium.client.screen.addon.SlotsScreenAddon;
+import com.hrznstudio.titanium.client.screen.asset.DefaultAssetProvider;
+import com.hrznstudio.titanium.client.screen.asset.IAssetProvider;
+import com.hrznstudio.titanium.util.AssetUtil;
+import mezz.jei.api.constants.VanillaTypes;
+import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
+import mezz.jei.api.gui.builder.ITooltipBuilder;
+import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
+import mezz.jei.api.helpers.IGuiHelper;
+import mezz.jei.api.neoforge.NeoForgeTypes;
+import mezz.jei.api.recipe.IFocusGroup;
+import mezz.jei.api.recipe.RecipeIngredientRole;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.RecipeInput;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.yxiao233.industrialforegoingextra.api.jei.AbstractJEICategory;
+import net.yxiao233.industrialforegoingextra.api.jei.JeiCategory;
+import net.yxiao233.industrialforegoingextra.common.config.machine.ArcaneDragonForgingConfig;
+import net.yxiao233.industrialforegoingextra.common.recipes.ArcaneDragonEggForgingRecipe;
+import net.yxiao233.industrialforegoingextra.common.registry.IFEBlocks;
+import net.yxiao233.industrialforegoingextra.common.registry.IFERecipes;
+import net.yxiao233.industrialforegoingextra.compact.jei.IFERecipeType;
+import org.apache.commons.lang3.tuple.Pair;
+import org.jetbrains.annotations.NotNull;
+
+import java.awt.*;
+import java.util.Objects;
+
+@JeiCategory
+public class ArcaneDragonEggForgingCategory extends AbstractJEICategory<RecipeHolder<ArcaneDragonEggForgingRecipe>> {
+    public static final Component TITLE = Component.translatable("block.industrialforegoingextra.arcane_dragon_egg_forging");
+    private final IDrawable bigTank_input1;
+    private final IDrawable bigTank_input2;
+    private final IDrawable bigTank_output;
+    public ArcaneDragonEggForgingCategory(IGuiHelper helper) {
+        super(helper, IFERecipeType.ARCANE_DRAGON_EGG_FORGING, TITLE, IFEBlocks.ARCANE_DRAGON_EGG_FORGING.getBlock().asItem(), 160, 82);
+
+        this.bigTank_input1 = helper.createDrawable(DefaultAssetProvider.DEFAULT_LOCATION, 180, 4, 12, 50);
+        this.bigTank_input2 = helper.createDrawable(DefaultAssetProvider.DEFAULT_LOCATION, 180, 4, 12, 50);
+
+        this.bigTank_output = helper.createDrawable(DefaultAssetProvider.DEFAULT_LOCATION, 180, 4, 12, 50);
+    }
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public <I extends RecipeInput, R extends Recipe<I>> RecipeType<R> getRecipe() {
+        return (RecipeType<R>) IFERecipes.ARCANE_DRAGON_EGG_FORGING.asType();
+    }
+
+    @Override
+    public void setRecipe(@NotNull IRecipeLayoutBuilder builder, @NotNull RecipeHolder<ArcaneDragonEggForgingRecipe> recipe, @NotNull IFocusGroup iFocusGroup) {
+        //Input
+        builder.addSlot(RecipeIngredientRole.INPUT, 66, 33).addIngredient(VanillaTypes.ITEM_STACK,recipe.value().input);
+        //InputFluid1
+        if(recipe.value().inputFluid1 != null && !recipe.value().inputFluid1.isEmpty()){
+            builder.addSlot(RecipeIngredientRole.INPUT, 24 + 3, 12 + 3).setFluidRenderer(ArcaneDragonForgingConfig.maxInputTankSize >= 1000 ? ArcaneDragonForgingConfig.maxInputTankSize : 1000,false,12,50).setOverlay(bigTank_input1,0,0).addIngredient(NeoForgeTypes.FLUID_STACK, recipe.value().inputFluid1);
+        }
+        //InputFluid2
+        if(recipe.value().inputFluid2 != null && !recipe.value().inputFluid2.isEmpty()){
+            builder.addSlot(RecipeIngredientRole.INPUT, 44 + 3, 12 + 3).setFluidRenderer(ArcaneDragonForgingConfig.maxInputTankSize >= 1000 ? ArcaneDragonForgingConfig.maxInputTankSize : 1000,false,12,50).setOverlay(bigTank_input2,0,0).addIngredient(NeoForgeTypes.FLUID_STACK, recipe.value().inputFluid2);
+        }
+        //Output
+        if(recipe.value().output.isPresent()){
+            ItemStack stack = recipe.value().output.get();
+            stack.getItem().onCraftedBy(stack,null,null);
+            builder.addSlot(RecipeIngredientRole.OUTPUT, 119, 16).addIngredient(VanillaTypes.ITEM_STACK,stack);
+        }
+        //OutputFluid
+        recipe.value().outputFluid.ifPresent(stack -> builder.addSlot(RecipeIngredientRole.OUTPUT, 142, 17).setFluidRenderer(1000L, false, 12, 50).setOverlay(this.bigTank_output, 0, 0).addIngredient(NeoForgeTypes.FLUID_STACK, stack));
+    }
+
+    @Override
+    public void draw(@NotNull RecipeHolder<ArcaneDragonEggForgingRecipe> recipe, @NotNull IRecipeSlotsView recipeSlotsView, @NotNull GuiGraphics guiGraphics, double mouseX, double mouseY) {
+        //Background
+        EnergyBarScreenAddon.drawBackground(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER, 0, 12, 0, 0);
+        //Input
+        SlotsScreenAddon.drawAsset(guiGraphics,Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER,66,33,0,0,1, integer -> Pair.of(18 * (integer % 1), 18 * (integer / 1)), integer -> ItemStack.EMPTY, true, integer -> new Color(DyeColor.LIGHT_BLUE.getFireworkColor()), integer -> true, 1);
+        //Output
+        SlotsScreenAddon.drawAsset(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER, 119, 16, 0, 0, 3, integer -> Pair.of(18 * (integer % 1), 18 * (integer / 1)), integer -> ItemStack.EMPTY, true, integer -> new Color(DyeColor.ORANGE.getFireworkColor()), integer -> true, 1);
+        //InputFluid1
+        AssetUtil.drawAsset(guiGraphics, Minecraft.getInstance().screen, Objects.requireNonNull(DefaultAssetProvider.DEFAULT_PROVIDER.getAsset(AssetTypes.TANK_NORMAL)), 44, 12);
+        //InputFluid2
+        AssetUtil.drawAsset(guiGraphics, Minecraft.getInstance().screen, Objects.requireNonNull(DefaultAssetProvider.DEFAULT_PROVIDER.getAsset(AssetTypes.TANK_NORMAL)), 24, 12);
+        //OutputFluid
+        AssetUtil.drawAsset(guiGraphics, Minecraft.getInstance().screen, Objects.requireNonNull(DefaultAssetProvider.DEFAULT_PROVIDER.getAsset(AssetTypes.TANK_NORMAL)), 139, 14);
+        //ProgressBar
+        AssetUtil.drawAsset(guiGraphics, Minecraft.getInstance().screen, IAssetProvider.getAsset(DefaultAssetProvider.DEFAULT_PROVIDER, AssetTypes.PROGRESS_BAR_BACKGROUND_ARROW_HORIZONTAL), 92, 41 - 8);
+        //EnergyBar
+        int consumed = recipe.value().processingTime * ArcaneDragonForgingConfig.powerPerTick;
+        EnergyBarScreenAddon.drawForeground(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER, 0, 12, 0, 0, consumed, (int) Math.max(50000, (double) consumed));
+    }
+
+    @Override
+    public void getTooltip(@NotNull ITooltipBuilder tooltip, @NotNull RecipeHolder<ArcaneDragonEggForgingRecipe> recipe, @NotNull IRecipeSlotsView recipeSlotsView, double mouseX, double mouseY) {
+        super.getTooltip(tooltip, recipe, recipeSlotsView, mouseX, mouseY);
+
+        int consumed = recipe.value().processingTime * 60;
+        addEnergyBarTooltip(tooltip,mouseX,mouseY,consumed,(int) Math.max(50000, (double) consumed));
+    }
+}

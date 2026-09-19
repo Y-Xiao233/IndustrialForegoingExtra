@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "minecraft:echo_shard"
+    }
+  ],
+  "type": "industrialforegoingextra:infuser",
+  "input": {
+    "count": 1,
+    "id": "minecraft:amethyst_shard"
+  },
+  "inputFluid": {
+    "amount": 200,
+    "id": "industrialforegoingextra:liquid_sculk_matter"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:echo_shard"
+  },
+  "processingTime": 200
+}

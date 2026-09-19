@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "subfacing=east": {
+      "model": "industrialforegoingextra:block/fluid_crafting_table",
+      "y": 90
+    },
+    "subfacing=north": {
+      "model": "industrialforegoingextra:block/fluid_crafting_table"
+    },
+    "subfacing=south": {
+      "model": "industrialforegoingextra:block/fluid_crafting_table",
+      "y": 180
+    },
+    "subfacing=west": {
+      "model": "industrialforegoingextra:block/fluid_crafting_table",
+      "y": 270
+    }
+  }
+}

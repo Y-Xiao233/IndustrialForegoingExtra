@@ -1,0 +1,23 @@
+{
+  "values": [
+    "industrialforegoingextra:infuser",
+    "industrialforegoingextra:arcane_dragon_egg_forging",
+    "industrialforegoingextra:creative_capacitor",
+    "industrialforegoingextra:saucepan",
+    "industrialforegoingextra:fermenter",
+    "industrialforegoingextra:ultimate_machine_frame",
+    "industrialforegoingextra:dragon_star_block",
+    "industrialforegoing:machine_frame_pity",
+    "industrialforegoing:machine_frame_simple",
+    "industrialforegoing:machine_frame_advanced",
+    "industrialforegoing:machine_frame_supreme",
+    "industrialforegoingextra:big_dissolution_chamber",
+    "industrialforegoingextra:bounding",
+    "industrialforegoingextra:fluid_crafting_table",
+    "industrialforegoingextra:dragon_generator",
+    "industrialforegoingextra:simulated_mob_crusher",
+    "industrialforegoingextra:simulated_mob_duplicator",
+    "industrialforegoingextra:simulated_ore_laser_base",
+    "industrialforegoingextra:simulated_fluid_laser_base"
+  ]
+}

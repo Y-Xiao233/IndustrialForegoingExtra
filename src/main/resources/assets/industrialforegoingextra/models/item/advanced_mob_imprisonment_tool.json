@@ -1,0 +1,9 @@
+{
+  "parent": "industrialforegoing:item/item",
+  "textures": {
+    "layer0": "industrialforegoingextra:item/advanced_mob_imprisonment_tool_overlay",
+    "layer1": "industrialforegoingextra:item/advanced_mob_imprisonment_tool_color1",
+    "layer2": "industrialforegoingextra:item/advanced_mob_imprisonment_tool_color2",
+    "layer3": "industrialforegoingextra:item/advanced_mob_imprisonment_tool_dot"
+  }
+}

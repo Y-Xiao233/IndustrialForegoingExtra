@@ -1,0 +1,46 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialforegoingextra:dragon_star_block"
+    }
+  ],
+  "type": "industrialforegoingextra:shaped",
+  "inputFluid": {
+    "amount": 8000,
+    "id": "industrialforegoingextra:liquid_sculk_matter"
+  },
+  "inputs": [
+    {
+      "item": "industrialforegoingextra:dragon_star"
+    },
+    {
+      "item": "industrialforegoingextra:dragon_star"
+    },
+    {
+      "item": "industrialforegoingextra:dragon_star"
+    },
+    {
+      "item": "industrialforegoingextra:dragon_star"
+    },
+    {
+      "item": "industrialforegoingextra:dragon_star"
+    },
+    {
+      "item": "industrialforegoingextra:dragon_star"
+    },
+    {
+      "item": "industrialforegoingextra:dragon_star"
+    },
+    {
+      "item": "industrialforegoingextra:dragon_star"
+    },
+    {
+      "item": "industrialforegoingextra:dragon_star"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "industrialforegoingextra:dragon_star_block"
+  }
+}

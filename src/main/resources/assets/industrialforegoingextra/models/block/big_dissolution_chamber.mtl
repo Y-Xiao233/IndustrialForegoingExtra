@@ -1,0 +1,9 @@
+# Made in Blockbench 5.1.6
+newmtl North
+map_Kd #north
+newmtl Side
+map_Kd #side
+newmtl Top
+map_Kd #top
+newmtl Bottom
+map_Kd #bottom

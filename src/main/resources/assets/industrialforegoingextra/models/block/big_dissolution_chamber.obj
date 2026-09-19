@@ -1,0 +1,52 @@
+# Made in Blockbench 5.1.6
+mtllib big_dissolution_chamber.mtl
+
+o cube
+v 2 3 2
+v 2 3 -1
+v 2 0 2
+v 2 0 -1
+v -1 3 -1
+v -1 3 2
+v -1 0 -1
+v -1 0 2
+vt 0 1
+vt 1 1
+vt 1 0
+vt 0 0
+vt 0 1
+vt 1 1
+vt 1 0
+vt 0 0
+vt 0 1
+vt 1 1
+vt 1 0
+vt 0 0
+vt 0 1
+vt 1 1
+vt 1 0
+vt 0 0
+vt 0 1
+vt 1 1
+vt 1 0
+vt 0 0
+vt 0 1
+vt 1 1
+vt 1 0
+vt 0 0
+vn 0 0 -1
+vn 1 0 0
+vn 0 0 1
+vn -1 0 0
+vn 0 1 0
+vn 0 -1 0
+usemtl North
+f 4/4/1 7/3/1 5/2/1 2/1/1
+usemtl Side
+f 3/8/2 4/7/2 2/6/2 1/5/2
+f 8/12/3 3/11/3 1/10/3 6/9/3
+f 7/16/4 8/15/4 6/14/4 5/13/4
+usemtl Top
+f 6/20/5 1/19/5 2/18/5 5/17/5
+usemtl Bottom
+f 7/24/6 4/23/6 3/22/6 8/21/6

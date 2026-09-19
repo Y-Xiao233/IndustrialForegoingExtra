@@ -1,0 +1,11 @@
+{
+  "parent": "industrialforegoing:block/base_block",
+  "textures": {
+    "north": "industrialforegoingextra:block/dragon_generator_front",
+    "south": "industrialforegoingextra:block/dragon_generator_side",
+    "west": "industrialforegoingextra:block/dragon_generator_side",
+    "east": "industrialforegoingextra:block/dragon_generator_side",
+    "up": "industrialforegoing:block/base/top",
+    "down": "industrialforegoing:block/base/buttom"
+  }
+}

@@ -1,0 +1,27 @@
+package net.yxiao233.industrialforegoingextra.api.recipe;
+
+import com.buuz135.industrial.recipe.LaserDrillFluidRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.world.item.ItemStack;
+import net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
+
+public class LaserDrillFluidRecipeBuilder extends IFERecipeBuilder {
+    private LaserDrillFluidRecipeBuilder(ItemStack output) {
+        super(output);
+    }
+
+    private LaserDrillFluidRecipeBuilder(ItemStack output, String id) {
+        super(output, id);
+    }
+
+    public LaserDrillFluidRecipeBuilder(SizedFluidIngredient output, String id){
+        super(ItemStack.EMPTY);
+        this.outputFluid(output);
+        this.id(id);
+    }
+
+    @Override
+    public void save(RecipeOutput output) {
+        LaserDrillFluidRecipe.createRecipe(output,this.getId(),this.getNameSpace(),new LaserDrillFluidRecipe(this.getOutputIngredientFluid(),this.getCatalyst(),this.getEntity(),this.getRarity()));
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialforegoingextra:dragon_star"
+    }
+  ],
+  "type": "industrialforegoingextra:infuser",
+  "input": {
+    "count": 1,
+    "id": "minecraft:nether_star"
+  },
+  "inputFluid": {
+    "amount": 1000,
+    "id": "industrialforegoingextra:liquid_dragon_breath"
+  },
+  "output": {
+    "count": 1,
+    "id": "industrialforegoingextra:dragon_star"
+  },
+  "processingTime": 200
+}

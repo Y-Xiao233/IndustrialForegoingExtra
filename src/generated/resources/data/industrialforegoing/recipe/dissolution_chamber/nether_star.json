@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "minecraft:nether_star"
+    }
+  ],
+  "type": "industrialforegoing:dissolution_chamber",
+  "input": [
+    {
+      "item": "industrialforegoingextra:rough_dragon_star"
+    }
+  ],
+  "inputFluid": {
+    "amount": 1000,
+    "fluid": "industrialforegoingextra:liquid_malic_acid_source"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:nether_star"
+  },
+  "processingTime": 200
+}

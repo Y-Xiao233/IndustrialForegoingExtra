@@ -1,0 +1,46 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialforegoingextra:big_dissolution_chamber"
+    }
+  ],
+  "type": "industrialforegoingextra:shaped",
+  "inputFluid": {
+    "amount": 1000,
+    "id": "industrialforegoingextra:liquid_sculk_matter"
+  },
+  "inputs": [
+    {
+      "tag": "c:plastics"
+    },
+    {
+      "tag": "c:buckets"
+    },
+    {
+      "tag": "c:plastics"
+    },
+    {
+      "item": "industrialforegoing:dissolution_chamber"
+    },
+    {
+      "tag": "industrialforegoingextra:machine_frame/ultimate"
+    },
+    {
+      "item": "industrialforegoing:dissolution_chamber"
+    },
+    {
+      "tag": "c:plastics"
+    },
+    {
+      "tag": "c:chests"
+    },
+    {
+      "tag": "c:plastics"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "industrialforegoingextra:big_dissolution_chamber"
+  }
+}

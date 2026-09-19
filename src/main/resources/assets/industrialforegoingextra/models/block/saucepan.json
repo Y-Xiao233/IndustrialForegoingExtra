@@ -1,0 +1,10 @@
+{
+  "parent": "industrialforegoing:block/base_block",
+  "textures": {
+    "south": "industrialforegoingextra:block/saucepan_side",
+    "west": "industrialforegoingextra:block/saucepan_side",
+    "east": "industrialforegoingextra:block/saucepan_side",
+    "north": "industrialforegoingextra:block/saucepan_side",
+    "up": "industrialforegoingextra:block/saucepan_top"
+  }
+}

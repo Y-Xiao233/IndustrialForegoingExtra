@@ -1,0 +1,46 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialforegoingextra:netherite_gear"
+    }
+  ],
+  "type": "industrialforegoingextra:shaped",
+  "inputFluid": {
+    "amount": 100,
+    "id": "industrialforegoing:meat"
+  },
+  "inputs": [
+    {
+      "item": "industrialforegoingextra:air"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "industrialforegoingextra:air"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "industrialforegoingextra:air"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "industrialforegoingextra:air"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "industrialforegoingextra:air"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "industrialforegoingextra:netherite_gear"
+  }
+}

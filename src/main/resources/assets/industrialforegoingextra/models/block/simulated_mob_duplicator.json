@@ -1,0 +1,10 @@
+{
+  "parent": "industrialforegoing:block/base_block",
+  "textures": {
+    "south": "industrialforegoingextra:block/simulated_mob_duplicator_side",
+    "west": "industrialforegoingextra:block/simulated_mob_duplicator_side",
+    "east": "industrialforegoingextra:block/simulated_mob_duplicator_side",
+    "north": "industrialforegoingextra:block/simulated_mob_duplicator_side",
+    "up": "industrialforegoing:block/mob_duplicator_top"
+  }
+}

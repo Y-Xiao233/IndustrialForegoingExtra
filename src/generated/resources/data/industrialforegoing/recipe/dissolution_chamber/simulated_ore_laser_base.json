@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialforegoingextra:simulated_ore_laser_base"
+    }
+  ],
+  "type": "industrialforegoing:dissolution_chamber",
+  "input": [
+    {
+      "item": "industrialforegoing:ore_laser_base"
+    },
+    {
+      "item": "minecraft:conduit"
+    },
+    {
+      "tag": "industrialforegoingextra:machine_frame/ultimate"
+    },
+    {
+      "item": "minecraft:sculk"
+    },
+    {
+      "item": "minecraft:heavy_core"
+    },
+    {
+      "item": "minecraft:dragon_breath"
+    },
+    {
+      "tag": "c:storage_blocks/netherite"
+    },
+    {
+      "item": "minecraft:nether_star"
+    }
+  ],
+  "inputFluid": {
+    "amount": 100,
+    "fluid": "industrialforegoingextra:dragon_star_essence_source"
+  },
+  "output": {
+    "count": 1,
+    "id": "industrialforegoingextra:simulated_ore_laser_base"
+  },
+  "processingTime": 400
+}

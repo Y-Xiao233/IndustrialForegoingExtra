@@ -1,0 +1,49 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialforegoingextra:speed_addon_6"
+    }
+  ],
+  "type": "industrialforegoing:dissolution_chamber",
+  "input": [
+    {
+      "tag": "c:dusts/redstone"
+    },
+    {
+      "tag": "c:dusts/redstone"
+    },
+    {
+      "tag": "c:glass_panes/colorless"
+    },
+    {
+      "item": "industrialforegoingextra:speed_addon_5"
+    },
+    {
+      "item": "industrialforegoingextra:dragon_star"
+    },
+    {
+      "item": "industrialforegoingextra:dragon_star"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "inputFluid": {
+    "amount": 1000,
+    "fluid": "industrialforegoingextra:liquid_dragon_breath"
+  },
+  "output": {
+    "components": {
+      "titanium:augments": {
+        "Speed": 7.0
+      }
+    },
+    "count": 1,
+    "id": "industrialforegoingextra:speed_addon_6"
+  },
+  "processingTime": 200
+}
