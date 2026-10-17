@@ -233,6 +233,22 @@ public class IFESerializableProvider{
                 .outputFluid(FluidStack.EMPTY)
                 .save(recipeOutput);
 
+        IFERecipeBuilders.dissolutionChamberRecipe(IFEBlocks.SIMULATED_MOB_CRUSHER.asItem().getDefaultInstance())
+                .inputs(
+                        itemValue(ModuleAgricultureHusbandry.MOB_CRUSHER.asItem().getDefaultInstance()),
+                        itemValue(Items.CONDUIT.getDefaultInstance()),
+                        tagValue(IndustrialTags.Items.MACHINE_FRAME_SUPREME),
+                        itemValue(Items.SCULK.getDefaultInstance()),
+                        itemValue(Items.HEAVY_CORE.getDefaultInstance()),
+                        itemValue(Items.DRAGON_BREATH.getDefaultInstance()),
+                        tagValue(Tags.Items.STORAGE_BLOCKS_NETHERITE),
+                        itemValue(Items.NETHER_STAR.getDefaultInstance())
+                )
+                .inputFluid(ModuleCore.ETHER.getSourceFluid(),1000)
+                .processingTime(400)
+                .outputFluid(FluidStack.EMPTY)
+                .save(recipeOutput);
+
 
         //infuser
         IFERecipeBuilders.infuserRecipe(IFEItems.DRAGON_STAR.get().getDefaultInstance())
