@@ -1,13 +1,10 @@
 package net.yxiao233.industrialforegoingextra.compact.jei;
 
-import com.buuz135.industrial.plugin.jei.IndustrialRecipeTypes;
-import com.hrznstudio.titanium.container.BasicAddonContainer;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
-import mezz.jei.api.registration.IRecipeTransferRegistration;
 import mezz.jei.api.runtime.IJeiRuntime;
 import net.minecraft.resources.ResourceLocation;
 import net.yxiao233.industrialforegoingextra.IndustrialForegoingExtra;
@@ -30,11 +27,6 @@ public class JEIPlugin implements IModPlugin {
     @Override
     public void onRuntimeAvailable(@NotNull IJeiRuntime jeiRuntime) {
         JeiHelper.hideItem(jeiRuntime,IFEItems.AIR);
-    }
-
-    @Override
-    public void registerRecipeTransferHandlers(IRecipeTransferRegistration registration) {
-        registration.addRecipeTransferHandler(BasicAddonContainer.class,null, IndustrialRecipeTypes.DISSOLUTION,4,8,17,36);
     }
 
     @Override

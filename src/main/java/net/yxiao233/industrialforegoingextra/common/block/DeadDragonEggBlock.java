@@ -44,7 +44,6 @@ public class DeadDragonEggBlock extends DragonEggBlock {
         }
     }
 
-    //TODO
     @Override
     public @NotNull VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull CollisionContext context) {
         return new BlockBoxHelper("dead_dragon_egg").getVoxelShapes();
