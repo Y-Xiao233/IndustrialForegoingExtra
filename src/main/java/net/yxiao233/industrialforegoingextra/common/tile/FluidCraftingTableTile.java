@@ -107,13 +107,13 @@ public class FluidCraftingTableTile extends IndustrialProcessingTile<FluidCrafti
                     IAssetType<IAsset> asset = AssetTypes.BUTTON_SIDENESS_ENABLED;
                     String[] tip = new String[2];
                     ChatFormatting chatFormatting = ChatFormatting.GOLD;
-                    tip[0] = chatFormatting + LangUtil.getString("tooltip.ifeu.fluid_crafting_table.auto_craft", new Object[0]);
-                    tip[1] = "tooltip.ifeu.fluid_crafting_table.auto_craft_1";
+                    tip[0] = chatFormatting + LangUtil.getString("tooltip.industrialforegoingextra.fluid_crafting_table.auto_craft", new Object[0]);
+                    tip[1] = "tooltip.industrialforegoingextra.fluid_crafting_table.auto_craft_1";
                     buttonInfo[0] = new StateButtonInfo(0, asset, tip);
                     asset = AssetTypes.BUTTON_SIDENESS_DISABLED;
                     tip = new String[2];
-                    tip[0] = chatFormatting + LangUtil.getString("tooltip.ifeu.fluid_crafting_table.original", new Object[0]);
-                    tip[1] = "tooltip.ifeu.fluid_crafting_table.original_1";
+                    tip[0] = chatFormatting + LangUtil.getString("tooltip.industrialforegoingextra.fluid_crafting_table.original", new Object[0]);
+                    tip[1] = "tooltip.industrialforegoingextra.fluid_crafting_table.original_1";
                     buttonInfo[1] = new StateButtonInfo(1, asset, tip);
                     return new StateButtonAddon(this, buttonInfo) {
                         public int getState() {
@@ -136,13 +136,13 @@ public class FluidCraftingTableTile extends IndustrialProcessingTile<FluidCrafti
                     IAssetType<IAsset> asset = AssetTypes.BUTTON_SIDENESS_ENABLED;
                     String[] tip = new String[2];
                     ChatFormatting chatFormatting = ChatFormatting.GOLD;
-                    tip[0] = chatFormatting + LangUtil.getString("tooltip.ifeu.fluid_crafting_table.render_fluid", new Object[0]);
-                    tip[1] = "tooltip.ifeu.fluid_crafting_table.render_fluid_1";
+                    tip[0] = chatFormatting + LangUtil.getString("tooltip.industrialforegoingextra.fluid_crafting_table.render_fluid", new Object[0]);
+                    tip[1] = "tooltip.industrialforegoingextra.fluid_crafting_table.render_fluid_1";
                     buttonInfo[0] = new StateButtonInfo(0, asset, tip);
                     asset = AssetTypes.BUTTON_SIDENESS_DISABLED;
                     tip = new String[2];
-                    tip[0] = chatFormatting + LangUtil.getString("tooltip.ifeu.fluid_crafting_table.not_render_fluid", new Object[0]);
-                    tip[1] = "tooltip.ifeu.fluid_crafting_table.not_render_fluid_1";
+                    tip[0] = chatFormatting + LangUtil.getString("tooltip.industrialforegoingextra.fluid_crafting_table.not_render_fluid", new Object[0]);
+                    tip[1] = "tooltip.industrialforegoingextra.fluid_crafting_table.not_render_fluid_1";
                     buttonInfo[1] = new StateButtonInfo(1, asset, tip);
                     return new StateButtonAddon(this, buttonInfo) {
                         public int getState() {
