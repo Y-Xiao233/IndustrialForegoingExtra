@@ -12,6 +12,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.yxiao233.industrialforegoingextra.IndustrialForegoingExtra;
 import net.yxiao233.industrialforegoingextra.common.registry.IFEBlocks;
 import net.yxiao233.industrialforegoingextra.common.registry.IFETags;
+import net.yxiao233.industrialforegoingextra.compact.productivebees.ModuleBeeRegistries;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -46,7 +47,11 @@ public class IFEBlockTagProvider extends BlockTagsProvider {
                 .add(IFEBlocks.SIMULATED_MOB_CRUSHER.getBlock())
                 .add(IFEBlocks.SIMULATED_MOB_DUPLICATOR.getBlock())
                 .add(IFEBlocks.SIMULATED_ORE_LASER_BASE.getBlock())
-                .add(IFEBlocks.SIMULATED_FLUID_LASER_BASE.getBlock());
+                .add(IFEBlocks.SIMULATED_FLUID_LASER_BASE.getBlock())
+                .add(ModuleBeeRegistries.BREEDING_CHAMBER.getBlock())
+                .add(ModuleBeeRegistries.BEE_SPAWNER.getBlock())
+                .add(ModuleBeeRegistries.BEE_FISHING_DEVICE.getBlock())
+                .add(ModuleBeeRegistries.BEE_CONVERTER.getBlock());
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(IFEBlocks.INFUSER.getBlock())

@@ -10,6 +10,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.yxiao233.industrialforegoingextra.IndustrialForegoingExtra;
 import net.yxiao233.industrialforegoingextra.api.jei.AbstractJEICategory;
 import net.yxiao233.industrialforegoingextra.common.registry.IFEItems;
+import net.yxiao233.industrialforegoingextra.compact.productivebees.ModuleBeeRegistries;
+import net.yxiao233.industrialforegoingextra.util.IntegrationHelper;
 import net.yxiao233.industrialforegoingextra.util.JeiHelper;
 import org.jetbrains.annotations.NotNull;
 
@@ -37,6 +39,9 @@ public class JEIPlugin implements IModPlugin {
     @Override
     public void registerRecipeCatalysts(@NotNull IRecipeCatalystRegistration registration) {
         JeiHelper.registerRecipeCatalysts(registration,categories);
+        if(IntegrationHelper.isModLoadedBeforeRegistry("productivebees")){
+            ModuleBeeRegistries.registryJeiCatalyst(registration);
+        }
     }
 
     @Override

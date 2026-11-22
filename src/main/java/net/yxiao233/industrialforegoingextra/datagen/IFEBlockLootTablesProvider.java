@@ -11,6 +11,7 @@ import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.yxiao233.industrialforegoingextra.IndustrialForegoingExtra;
 import net.yxiao233.industrialforegoingextra.common.registry.IFEBlocks;
+import net.yxiao233.industrialforegoingextra.compact.productivebees.ModuleBeeRegistries;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -47,6 +48,10 @@ public class IFEBlockLootTablesProvider {
             this.dropSelf(IFEBlocks.SIMULATED_MOB_DUPLICATOR.getBlock());
             this.dropSelf(IFEBlocks.SIMULATED_ORE_LASER_BASE.getBlock());
             this.dropSelf(IFEBlocks.SIMULATED_FLUID_LASER_BASE.getBlock());
+            this.dropSelf(ModuleBeeRegistries.BREEDING_CHAMBER.getBlock());
+            this.dropSelf(ModuleBeeRegistries.BEE_CONVERTER.getBlock());
+            this.dropSelf(ModuleBeeRegistries.BEE_FISHING_DEVICE.getBlock());
+            this.dropSelf(ModuleBeeRegistries.BEE_SPAWNER.getBlock());
         }
 
         @Override

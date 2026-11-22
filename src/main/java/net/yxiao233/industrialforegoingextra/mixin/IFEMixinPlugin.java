@@ -6,18 +6,19 @@ import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class IFEMixinPlugin implements IMixinConfigPlugin {
-    private boolean industrialForegoingSouls = false;
+    private static final String MIXIN_PACKAGE_NAME = "net.yxiao233.industrialforegoingextra.mixin";
     @Override
     public void onLoad(String mixinPackage) {
-        for(ModInfo info : LoadingModList.get().getMods()){
-            if(info.getModId().equals("industrialforegoingsouls")){
-                industrialForegoingSouls = true;
-            }
-        }
+        MixinLoadedCondition.addCondition("industrialforegoingsouls");
+        MixinLoadedCondition.addCondition("productivebees");
+        MixinLoadedCondition.init();
     }
 
     @Override
@@ -27,14 +28,7 @@ public class IFEMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        List<String> list = List.of(
-                "net.yxiao233.ifs.mixin.tile.MixinSoulLaserBaseBlockEntity"
-        );
-
-        if(list.contains(mixinClassName)){
-            return industrialForegoingSouls;
-        }
-        return true;
+        return MixinLoadedCondition.shouldApply(mixinClassName);
     }
 
     @Override
@@ -55,5 +49,33 @@ public class IFEMixinPlugin implements IMixinConfigPlugin {
     @Override
     public void postApply(String targetClassName, ClassNode targetClass, String mixinClassName, IMixinInfo mixinInfo) {
 
+    }
+
+    private static class MixinLoadedCondition {
+        private static final HashMap<String, Boolean> modMap = new HashMap<>();
+        public static void addCondition(String modid){
+            modMap.put(modid, false);
+        }
+        public static void init(){
+            for(ModInfo info : LoadingModList.get().getMods()){
+                if(modMap.containsKey(info.getModId())){
+                    modMap.merge(info.getModId(),true,(oldValue, newValue) ->{
+                        return true;
+                    });
+                }
+            }
+        }
+        public static boolean shouldApply(String mixinClassName){
+            AtomicBoolean shouldApply = new AtomicBoolean(false);
+            String[] array = modMap.keySet().toArray(String[]::new);
+            for (String modid : array) {
+                Boolean shouldLoaded = modMap.get(modid);
+                if(mixinClassName.startsWith(MIXIN_PACKAGE_NAME + "." + modid + ".")){
+                    shouldApply.set(shouldLoaded);
+                    break;
+                }
+            }
+            return shouldApply.get();
+        }
     }
 }

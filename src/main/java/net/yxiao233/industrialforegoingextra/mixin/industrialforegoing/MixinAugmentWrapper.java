@@ -1,4 +1,4 @@
-package net.yxiao233.industrialforegoingextra.mixin;
+package net.yxiao233.industrialforegoingextra.mixin.industrialforegoing;
 
 import com.hrznstudio.titanium.item.AugmentWrapper;
 import net.minecraft.world.item.ItemStack;

@@ -1,0 +1,34 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialforegoingextra:breeding_chamber"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "productivebees"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "industrialforegoing:machine_frame/advanced"
+    },
+    "B": {
+      "item": "productivebees:sturdy_bee_cage"
+    },
+    "C": {
+      "item": "productivebees:breeding_chamber"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "BCB",
+    "ABA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialforegoingextra:breeding_chamber"
+  }
+}

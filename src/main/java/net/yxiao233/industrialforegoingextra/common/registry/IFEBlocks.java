@@ -13,6 +13,8 @@ import net.yxiao233.industrialforegoingextra.api.tile.BoundingTile;
 import net.yxiao233.industrialforegoingextra.api.registry.RegistryHelper;
 import net.yxiao233.industrialforegoingextra.api.registry.RegistryModule;
 import net.yxiao233.industrialforegoingextra.common.block.*;
+import net.yxiao233.industrialforegoingextra.compact.productivebees.ModuleBeeRegistries;
+import net.yxiao233.industrialforegoingextra.util.IntegrationHelper;
 import net.yxiao233.industrialforegoingextra.util.RarityHelper;
 
 @RegistryModule
@@ -55,5 +57,8 @@ public class IFEBlocks implements IModule {
         SIMULATED_MOB_CRUSHER = RegistryHelper.blockWithTileItem(helper,"simulated_mob_crusher",SimulatedMobCrusherBlock::new);
         SIMULATED_ORE_LASER_BASE = RegistryHelper.blockWithTileItem(helper,"simulated_ore_laser_base",SimulatedOreLaserBaseBlock::new);
         SIMULATED_FLUID_LASER_BASE = RegistryHelper.blockWithTileItem(helper,"simulated_fluid_laser_base",SimulatedFluidLaserBaseBlock::new);
+        if(IntegrationHelper.isModLoadedBeforeRegistry("productivebees")){
+            ModuleBeeRegistries.registryBlock(helper);
+        }
     }
 }

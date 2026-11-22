@@ -1,7 +1,6 @@
 package net.yxiao233.industrialforegoingextra.datagen;
 
 import com.hrznstudio.titanium.block.RotatableBlock;
-import com.hrznstudio.titanium.block.RotationHandler;
 import com.hrznstudio.titanium.module.BlockWithTile;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -15,6 +14,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.yxiao233.industrialforegoingextra.IndustrialForegoingExtra;
 import net.yxiao233.industrialforegoingextra.common.registry.IFEBlocks;
+import net.yxiao233.industrialforegoingextra.compact.productivebees.ModuleBeeRegistries;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +45,27 @@ public class IFEBlockStateProvider extends BlockStateProvider {
         blockWithTileItem(IFEBlocks.SIMULATED_MOB_DUPLICATOR);
         blockWithTileItem(IFEBlocks.SIMULATED_ORE_LASER_BASE);
         blockWithTileItem(IFEBlocks.SIMULATED_FLUID_LASER_BASE);
+
+        //productivebees
+        fourWayBlockState(ModuleBeeRegistries.BEE_CONVERTER.getBlock());
+        onlyItem(ModuleBeeRegistries.BEE_CONVERTER.getBlock());
+        fourWayBlockState(ModuleBeeRegistries.BEE_FISHING_DEVICE.getBlock());
+        onlyItem(ModuleBeeRegistries.BEE_FISHING_DEVICE.getBlock());
+        fourWayBlockState(ModuleBeeRegistries.BEE_SPAWNER.getBlock());
+        onlyItem(ModuleBeeRegistries.BEE_SPAWNER.getBlock());
+        fourWayBlockState(ModuleBeeRegistries.BREEDING_CHAMBER.getBlock());
+        onlyItem(ModuleBeeRegistries.BREEDING_CHAMBER.getBlock());
     }
+
+    private void onlyItem(DeferredHolder<Block,Block> registryObject){
+        onlyItem(registryObject.get());
+    }
+
+    private void onlyItem(Block block){
+        simpleBlockItem(block,new ModelFile.UncheckedModelFile(IndustrialForegoingExtra.MODID +
+                ":block/" + BuiltInRegistries.BLOCK.getKey(block).getPath()));
+    }
+
 
     private boolean shouldGenerated(Block block){
         ResourceLocation location = BuiltInRegistries.BLOCK.getKey(block);

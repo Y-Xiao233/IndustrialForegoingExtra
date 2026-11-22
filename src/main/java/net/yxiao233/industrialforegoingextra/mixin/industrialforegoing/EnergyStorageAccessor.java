@@ -1,4 +1,4 @@
-package net.yxiao233.industrialforegoingextra.mixin;
+package net.yxiao233.industrialforegoingextra.mixin.industrialforegoing;
 
 import net.neoforged.neoforge.energy.EnergyStorage;
 import org.spongepowered.asm.mixin.Mixin;

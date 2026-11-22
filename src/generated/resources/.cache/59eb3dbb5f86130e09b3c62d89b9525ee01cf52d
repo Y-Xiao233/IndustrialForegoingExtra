@@ -1,6 +1,10 @@
-// 1.21.1	2026-09-19T17:35:27.3101362	Loot Tables
+// 1.21.1	2026-11-22T14:35:23.8750797	Loot Tables
 8a5260826cb76b0d4b6db37d860fba33bd264f4d data/industrialforegoingextra/loot_table/blocks/arcane_dragon_egg_forging.json
+699fcfb276db4b69644294fb6481a8e63fb0ea13 data/industrialforegoingextra/loot_table/blocks/bee_converter.json
+a31a5bdac4d4c5458455b21d516177df676fc3d3 data/industrialforegoingextra/loot_table/blocks/bee_fishing_device.json
+641ce5a584c60970391e39b0b41b57b4ba0014cf data/industrialforegoingextra/loot_table/blocks/bee_spawner.json
 bf74cb7f1569772a1af422bc4ee17b0e8b28a474 data/industrialforegoingextra/loot_table/blocks/big_dissolution_chamber.json
+3910c05cd83c211cde396bedb83da9fc0cbec506 data/industrialforegoingextra/loot_table/blocks/breeding_chamber.json
 8c7678037f5ca55307c0e1e16ba5508772015ae1 data/industrialforegoingextra/loot_table/blocks/creative_capacitor.json
 e8367a6995d7b63b55538891e847b80ccd8a1182 data/industrialforegoingextra/loot_table/blocks/dead_dragon_egg.json
 f2240566859b81416e9524f0ecdb9a153f37d762 data/industrialforegoingextra/loot_table/blocks/dragon_generator.json

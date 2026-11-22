@@ -1,4 +1,4 @@
-package net.yxiao233.industrialforegoingextra.mixin;
+package net.yxiao233.industrialforegoingextra.mixin.industrialforegoing;
 
 import com.buuz135.industrial.block.misc.tile.StasisChamberTile;
 import com.buuz135.industrial.block.tile.IndustrialAreaWorkingTile;

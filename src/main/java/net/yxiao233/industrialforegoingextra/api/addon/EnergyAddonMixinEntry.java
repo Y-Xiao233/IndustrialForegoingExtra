@@ -2,7 +2,7 @@ package net.yxiao233.industrialforegoingextra.api.addon;
 
 import com.hrznstudio.titanium.block.tile.MachineTile;
 import com.hrznstudio.titanium.component.energy.EnergyStorageComponent;
-import net.yxiao233.industrialforegoingextra.mixin.EnergyStorageAccessor;
+import net.yxiao233.industrialforegoingextra.mixin.industrialforegoing.EnergyStorageAccessor;
 import net.yxiao233.industrialforegoingextra.util.AugmentInventoryHelper;
 
 public class EnergyAddonMixinEntry {

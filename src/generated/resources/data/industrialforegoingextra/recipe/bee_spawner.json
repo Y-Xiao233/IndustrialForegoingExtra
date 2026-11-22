@@ -1,0 +1,43 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialforegoingextra:bee_spawner"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "productivebees"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "productivebees:sturdy_bee_cage"
+    },
+    "B": {
+      "tag": "industrialforegoing:machine_frame/advanced"
+    },
+    "C": {
+      "item": "productivebees:end_stone_nest"
+    },
+    "D": {
+      "item": "productivebees:oak_wood_nest"
+    },
+    "E": {
+      "item": "productivebees:coarse_dirt_nest"
+    },
+    "F": {
+      "item": "productivebees:soul_sand_nest"
+    }
+  },
+  "pattern": [
+    "ACA",
+    "DBE",
+    "AFA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialforegoingextra:bee_spawner"
+  }
+}

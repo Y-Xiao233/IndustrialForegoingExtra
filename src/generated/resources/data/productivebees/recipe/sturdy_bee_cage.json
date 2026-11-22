@@ -1,0 +1,34 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "productivebees:sturdy_bee_cage"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "productivebees"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "productivebees:bee_cage"
+    },
+    "B": {
+      "item": "industrialforegoingextra:apple_core"
+    },
+    "C": {
+      "tag": "c:plastics"
+    }
+  },
+  "pattern": [
+    "CAC",
+    "ABA",
+    "CAC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "productivebees:sturdy_bee_cage"
+  }
+}

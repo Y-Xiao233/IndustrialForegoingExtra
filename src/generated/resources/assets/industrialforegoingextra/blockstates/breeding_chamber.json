@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "subfacing=east": {
+      "model": "industrialforegoingextra:block/breeding_chamber",
+      "y": 90
+    },
+    "subfacing=north": {
+      "model": "industrialforegoingextra:block/breeding_chamber"
+    },
+    "subfacing=south": {
+      "model": "industrialforegoingextra:block/breeding_chamber",
+      "y": 180
+    },
+    "subfacing=west": {
+      "model": "industrialforegoingextra:block/breeding_chamber",
+      "y": 270
+    }
+  }
+}

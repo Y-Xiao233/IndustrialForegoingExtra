@@ -21,6 +21,10 @@
   "block.industrialforegoingextra.simulated_mob_crusher": "Simulated Mob Crusher",
   "block.industrialforegoingextra.simulated_ore_laser_base": "Simulated Ore Laser Base",
   "block.industrialforegoingextra.simulated_fluid_laser_base": "Simulated Fluid Laser Base",
+  "block.industrialforegoingextra.breeding_chamber": "Industrial Breeding Chamber",
+  "block.industrialforegoingextra.bee_converter": "Industrial Bee Converter",
+  "block.industrialforegoingextra.bee_fishing_device": "Industrial Bee Fishing Device",
+  "block.industrialforegoingextra.bee_spawner": "Industrial Bee Spawner",
 
   "item.industrialforegoingextra.speed": "Speed ",
   "item.industrialforegoingextra.processing": "Processing ",

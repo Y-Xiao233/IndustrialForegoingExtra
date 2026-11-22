@@ -21,6 +21,10 @@
   "block.industrialforegoingextra.simulated_mob_crusher": "模拟屠宰机",
   "block.industrialforegoingextra.simulated_ore_laser_base": "模拟矿物镭射钻",
   "block.industrialforegoingextra.simulated_fluid_laser_base": "模拟流体镭射钻",
+  "block.industrialforegoingextra.breeding_chamber": "工业繁殖箱",
+  "block.industrialforegoingextra.bee_converter": "工业蜜蜂转化器",
+  "block.industrialforegoingextra.bee_fishing_device": "工业蜜蜂捕获器",
+  "block.industrialforegoingextra.bee_spawner": "工业蜜蜂生成器",
 
   "item.industrialforegoingextra.speed": "速度 ",
   "item.industrialforegoingextra.processing": "处理 ",
